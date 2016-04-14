@@ -22,5 +22,5 @@ if __name__ == "__main__":
     if os.getenv("DEBUG"):
         kwargs["debug"] = True
     if os.getenv("PORT"):
-        kwargs["port"] = os.getenv("PORT")
+        kwargs["port"] = int(os.getenv("PORT"))
     app.run(**kwargs)
